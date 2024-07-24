@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <ul class="desktopnav">
+            <li><img src="./logo.svg" alt=""></li>
+            <li><button id="fs" onclick="openFeatures()">Features<img id="fdown" src="./icon-arrow-down.svg" alt=""><img  id="fup" src="icon-arrow-up.svg" alt=""></button></li>
+            <li><button onclick="openCompany()">Company<img id="cdown" src="./icon-arrow-down.svg" alt=""><img id="cup" src="icon-arrow-up.svg" alt=""></button></li>
+            <li><button>Careers</button></li>
+            <li><button>About</button></li>
+            <li class="acc"><button id="registerbtn">Register</button></li>
+            <li class="acc"><button id="loginbtn">Login</button></li>
+        </ul>
+        <ul class="mobilenav">
+            <li><img id="mobilelogo" src="./logo.svg" alt=""></li>
+            <li><button onclick="openMenu()"  class="menubtn"><img src="./icon-menu.svg" alt=""></button></li>
+        </ul>
+        
+    </div>
+    <div class="hiddenmenu" id="hiddenmenu">
+        <button class="closebtn" onclick="closeMenu()"><img src="icon-close-menu.svg" alt=""></button>
+        <ul>
+            <div class="leftbtns">
+                <li><button id="fs" onclick="openFeaturesMobile()">Features<img id="fdown" src="./icon-arrow-down.svg" alt=""><img id="fup" src="icon-arrow-up.svg" alt=""></button></li>
+                <li id="featurepopup"> 
+                    <div onclick="closeFeaturesMobile()" class="mobilefeatures" >
+                        <ul>
+                            <li><img src="icon-todo.svg" alt=""> Todo list</li>
+                            <li><img src="icon-calendar.svg" alt="">Calendar</li>
+                            <li><img src="icon-reminders.svg" alt="">Reminders</li>
+                            <li><img src="icon-planning.svg" alt="">Planning</li>
+                        </ul>
+                    </div>
+                </li>
+                
+                <li><button onclick="openCompanyMobile()">Company<img id="cdown" src="./icon-arrow-down.svg" alt=""><img id="cup" src="icon-arrow-up.svg" alt=""></button></li>
+                <li id="companypopup">
+                    <div onclick="closeCompanyMobile()" class="mobilecompany">
+                        <ul>
+                            <li>History</li>
+                            <li>Our team</li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><button>Careers</button></li>
+                <li><button>About</button></li>
+            </div>
+            <li><button id="loginmobile">Login</button></li>
+            <li><button id="registermobile">Register</button></li>
+            
+        </ul>
+    </div>
+    <div onclick="closeFeatures()" id="features">
+        <ul>
+            <li><img src="icon-todo.svg" alt=""> Todo list</li>
+            <li><img src="icon-calendar.svg" alt="">Calendar</li>
+            <li><img src="icon-reminders.svg" alt="">Reminders</li>
+            <li><img src="icon-planning.svg" alt="">Planning</li>
+        </ul>
+    </div>
+    <div onclick="closeCompany()"   id="company">
+        <ul>
+            <li>History</li>
+            <li>Our team</li>
+            <li>Blog</li>
+        </ul>
+    </div>
+    <div class="container">
+        <img id="mobile" src="./image-hero-mobile.png" alt="">
+        <div class="cover">
+            <img id="desktop" src="./image-hero-desktop.png" alt="">
+        </div>
+    </div>
+    <div class="texts">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location.Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button>Learn more</button>
+    </div>
+    <div class="sponsors">
+        <img src="./client-databiz.svg" alt="">
+        <img src="./client-audiophile.svg" alt="">
+        <img src="./client-meet.svg" alt="">
+        <img src="./client-maker.svg" alt="">
+    </div>
+</body>
+</html>
